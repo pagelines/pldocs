@@ -1,0 +1,140 @@
+.pldocs-wrapper{
+	position: relative;
+
+	.pldocs-title{
+		margin: 0 0 15px;
+	}
+	.sticky-wrapper{
+		position: absolute;
+	}
+	.pldocs-sidebar{
+		// border-style: solid;
+		// border-width: 1px;
+		width: 280px;
+		position: absolute;
+		.pldocs-mobile-drop{
+			text-align: center;
+			font-size: 15px;
+			line-height: 40px;
+			display: none;
+			cursor: pointer;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		ul{
+			padding: 10px 0;
+			li{
+				font-weight: 500;
+				font-size: 1em;
+				margin-bottom: 0px;
+				&.sub{
+					font-weight: 400;
+					padding-left: 20px
+				}
+				&.inView a{
+					font-weight: 450;
+				}
+				&.selected a{
+					background: #eee;
+				}
+			}
+
+		}
+		&.sticky{
+			float: none;
+			position: fixed;
+			top: 20px;
+			z-index: 6;
+			left: auto;
+
+		}
+	}
+	.pldocs-content{
+		margin-left: 320px;
+		padding: 20px 0;
+		min-height: 500px;
+	}
+	@media (max-width: @resPortraitTablet) {
+
+
+		.sticky-wrapper,
+		.pldocs-sidebar{
+			width: auto;
+			position: static !important;
+			height: auto !important;
+		}
+		.pldocs-sidebar{
+			.pldocs-mobile-drop{
+				display: block;
+			}
+			ul{
+				display: none;
+				&.show-me{
+					display: block;
+				}
+			}
+		}
+		.pldocs-content{
+			margin-left: 20px;
+		}
+
+	}
+}
+
+.section-pldocs.pl-area{
+	.pldocs-wrapper{
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+}
+
+
+.pldocs-search{
+		background: #f7f7f7;
+		height: 88px;
+		.fields{
+			padding:20px 40px
+		}
+}
+
+.pldocs-form{
+	.docs-search-box{
+		width:70%;
+		border-radius: 5px;
+		height:28px;
+		margin:10px;
+	}
+	.chosen-container{
+		margin-right:10px;
+	}
+	.docs-search-button{
+		margin-top:10px;
+		height:12px;
+	}
+}
+
+.pldocs-show-search{
+	padding:5px;
+}
+
+.pldocs-search-wrap{
+	margin-bottom:10px;
+}
+.pldocs-show-search-wrap{
+	border:1px solid #e6e6e6;
+	float: right;
+	position: relative;
+  z-index: 10;
+}
+.pldocs-selects{
+	padding-top:30px;
+	line-height:2em;
+	.themes,.extensions{
+		box-sizing: border-box;
+		ms-box-sizing: border-box;
+		webkit-box-sizing: border-box;
+		moz-box-sizing: border-box;
+		box-shadow:inset 0px 0px 0px 2px #f7f7f7;
+		padding: 2px 15px
+	}
+}
